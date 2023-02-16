@@ -16,11 +16,11 @@
         EPC_container_name: 'epc'
         mongo_db_host_access_port: '27017'
         mongo_db_container_expose_port: '27017'
-        open5gs_epc_image_name: 'laboraufg/epc-open5gs'
-        oaisim_enb_image_name: 'laboraufg/enb-openairsim'
-        oaisim_ue_image_name: 'laboraufg/ue-openairsim'
-        open5gs_mongodb_image_name : 'laboraufg/mongodb'
-        open5gs_webui_image_name : 'laboraufg/webui-open5gs'
+        open5gs_epc_image_name: 'dockersetup/epc-open5gs'
+        oaisim_enb_image_name: 'dockersetup/enb-openairsim'
+        oaisim_ue_image_name: 'dockersetup/ue-openairsim'
+        open5gs_mongodb_image_name : 'dockersetup/mongodb'
+        open5gs_webui_image_name : 'dockersetup/webui-open5gs'
         UE_folder_name_container_name: '/root/ue/'
         ENB_folder_name_container_name: '/root/enb/'
         BASE_DIR_INSTALL: '/root/oaisim-4g-install'
@@ -72,7 +72,7 @@
           copy  :
             dest: "{{ BASE_DIR_INSTALL }}/rcc.band7.tm1.nfapi.conf"
             content: |
-                Active_eNBs = ( "Computer Networks and Distributed Systems LABORAtory https://labora.inf.ufg.br - Brazil");
+                Active_eNBs = ( "Computer Networks and Distributed Systems - Brazil");
                 # Asn1_verbosity, choice in: none, info, annoying
                 Asn1_verbosity = "none";
 
